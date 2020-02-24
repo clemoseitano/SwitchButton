@@ -1,6 +1,8 @@
 package com.suke.widget.sample;
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.widget.SwitchCompat;
+import android.widget.CompoundButton;
 
 import com.suke.widget.SwitchButton;
 
@@ -10,7 +12,6 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
 		SwitchButton switchButton = (SwitchButton) findViewById(R.id.switch_button);
 
 		switchButton.setChecked(true);
@@ -20,10 +21,10 @@ public class MainActivity extends Activity {
 		switchButton.setShadowEffect(true);//disable shadow effect
 		switchButton.setEnabled(false);//disable button
 		switchButton.setEnableEffect(false);//disable the switch animation
-		switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
+		switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
-			public void onCheckedChanged(SwitchButton view, boolean isChecked) {
-				//TODO do your job
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
 			}
 		});
 
